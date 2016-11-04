@@ -19,6 +19,7 @@
       return;
     }
 
+    changeTitle($next);
 
     $current.addClass('secondary left').removeClass('active right');
     $next.addClass('active').removeClass('secondary');
@@ -46,6 +47,8 @@
       // alert('Vége a bulinak!');
       return;
     }
+
+    changeTitle($prev);
 
     $current.addClass('secondary right').removeClass('active');
     $prev.addClass('active').removeClass('secondary right');
@@ -75,6 +78,8 @@
     third = $('.third'),
     right = $('.right'),
     left = $('.left');
+
+    changeTitle($this);
 
     right.removeClass('right');
     left.removeClass('left');
@@ -119,8 +124,28 @@
 
   }
 
+  function changeTitle(element) {
+    var name = element.data('name'),
+        desc = element.data('desc'),
+        link = element.data('link');
 
+        $('#item-name').text(name);
+        $('#item-desc').text(desc);
+        $('#item-link').attr('href', link);
+  }
 
+  function init() {
+    var $current = $('.active'),
+        name = $current.data('name'),
+        desc = $current.data('desc'),
+        link = $current.data('link');
+
+        $('#item-name').text(name);
+        $('#item-desc').text(desc);
+        $('#item-link').attr('href', link);
+  }
+
+  init();
   $left.on('click', slideLeft);
   $right.on('click', slideRight);
   $element.on('click', elementClick);
