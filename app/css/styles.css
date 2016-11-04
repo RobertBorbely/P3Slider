@@ -1,0 +1,98 @@
+@charset "UTF-8";
+body {
+  margin: 0; }
+
+#slider {
+  position: relative;
+  height: 200px;
+  overflow: hidden; }
+  @media all and (min-width: 736px) {
+    #slider {
+      height: 600px; } }
+  @media all and (min-width: 500px) and (max-width: 736px) {
+    #slider {
+      height: 300px; } }
+  #slider .slider-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(150%, -50%);
+            transform: translate(150%, -50%);
+    display: block;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    width: 200px;
+    /** Eredeti számítás amikor felénél vannak a képek 
+
+    &.secondary {
+      display: block;
+      opacity: .95;
+      z-index: 8;
+
+      &.left {
+        transform: scale(0.8) translate(-112%, -62%);
+      }
+
+      &.right {
+        transform: scale(0.8) translate(-12%, -62%);
+      }
+    }
+
+    &.third {
+      display: block;
+      opacity: .9;
+      z-index: 6;
+
+      &.left {
+        transform: scale(0.6) translate(-212%, -84%);
+      }
+
+      &.right {
+        transform: scale(0.6) translate(52%, -84%);
+      } **/ }
+    @media all and (min-width: 736px) {
+      #slider .slider-element {
+        width: 600px; } }
+    @media all and (min-width: 500px) and (max-width: 736px) {
+      #slider .slider-element {
+        width: 300px; } }
+    #slider .slider-element.left {
+      -webkit-transform: scale(0.4) translate(-600%, -122%);
+              transform: scale(0.4) translate(-600%, -122%); }
+    #slider .slider-element.right {
+      -webkit-transform: scale(0.4) translate(2000px, -122%);
+              transform: scale(0.4) translate(2000px, -122%); }
+    #slider .slider-element.active {
+      -webkit-transform: scale(1) translate(-50%, -50%);
+              transform: scale(1) translate(-50%, -50%);
+      display: block;
+      z-index: 10; }
+    #slider .slider-element.secondary {
+      display: block;
+      opacity: 1;
+      z-index: 8; }
+      #slider .slider-element.secondary.left {
+        -webkit-transform: scale(0.8) translate(-150%, -62%);
+                transform: scale(0.8) translate(-150%, -62%); }
+      #slider .slider-element.secondary.right {
+        -webkit-transform: scale(0.8) translate(28%, -62%);
+                transform: scale(0.8) translate(28%, -62%); }
+    #slider .slider-element.third {
+      display: block;
+      opacity: 1;
+      z-index: 6; }
+      #slider .slider-element.third.left {
+        -webkit-transform: scale(0.6) translate(-294%, -84%);
+                transform: scale(0.6) translate(-294%, -84%); }
+      #slider .slider-element.third.right {
+        -webkit-transform: scale(0.6) translate(128%, -84%);
+                transform: scale(0.6) translate(128%, -84%); }
+
+.left-arrow {
+  float: left;
+  cursor: pointer; }
+
+.right-arrow {
+  float: right;
+  cursor: pointer; }

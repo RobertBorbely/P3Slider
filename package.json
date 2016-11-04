@@ -1,0 +1,17 @@
+{
+  "name": "Slider",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "echo \"Error no test specified\"&& exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "~2.9.11",
+    "gulp": "~3.9.0",
+    "gulp-autoprefixer": "~3.1.0",
+    "gulp-concat": "~2.6.0",
+    "gulp-livereload": "~3.8.1",
+    "gulp-ruby-sass": "~1.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "~1.6.0"
+  }
+}
